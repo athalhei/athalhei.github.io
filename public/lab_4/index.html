@@ -7,21 +7,26 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
         <div class="container">
             <h1>Andrew Thalheimer Lab 4</h1>
-            <form>
+            <form action="/api">
                 <ul class=.flex-outer>
                     <li><label for="fname">First Name</label></li>
                     <input type="text" id="fname" name="fname" maxlength="140">
+                    <br>
                     <li><label for="lname">Last Name</label></li>
                     <input type="text" id="lname" name="lname" maxlength="140">
+                    <br>
                     <li><label for="email">Email</label></li>
                     <input type="text" id="email" name="email">
+                    <br>
                     <li><label for="phone">Phone</label></li>
                     <input type="text" id="phone" name="phone">
+                    <br>
                     <li><label for="tf">Text Field</label></li>
                     <input type="text" id="tf" name="tf">
+                    <br>
                     <li>Age</li>
 
 
@@ -40,6 +45,8 @@
                         <label for="50-65">50-65</label>
                     </li>
                 </ul>
+
+                <input type="submit" value="Submit Form">
             </form>
         </div>
     </div>

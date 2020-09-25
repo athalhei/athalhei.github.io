@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 20px;
+  
+  }
+  
+  body {
+    width: 95%;
+    min-width: 200px;
+    margin: 0 auto;
+    background-color: #d4a7e9;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  ul {
+      list-style-type: none;
+  }
+
+  input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
+  label {
+    text-align:left;
+    width:150px;
+    display:block;
+    float:left;
+    clear:right;
+    font-size:18;
+  }
