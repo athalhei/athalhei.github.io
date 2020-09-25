@@ -38,3 +38,14 @@ html, body {
     clear:right;
     font-size:18;
   }
+
+  .flex-outer li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .flex-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
