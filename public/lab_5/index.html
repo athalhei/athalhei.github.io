@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Andrew Thalheimer's lab 4</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Andrew Thalheimer Lab 5</h1>
+            <form action="/api" method="post" id="form">
+                <ul class="flex-outer">
+                    <li><label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" maxlength="140">
+                    </li>
+                    <li><label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" maxlength="140">
+                    </li>
+                    <li><label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </li>
+                    <li><label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </li>
+                    <li><label for="tf">Text Field</label>
+                        <textarea id="tf" name="message" rows="5" cols="33"></textarea>
+                    </li>
+                    <li class="checkbox-list-label"><p>Age</p></li>
+
+
+                    <li>
+                        <ul class="flex-inner">
+                            <li>
+                                <input type="checkbox" id="18-35" name="age" value="18-35">
+                                <label for="18-35">18-35</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="35-50" name="age" value="35-50">
+                                <label for="35-50">35-50</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="50-65" name="age" value="50-65">
+                                <label for="50-65">50-65</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><button type="submit" form="form" name="submit" id="sub">Submit Form</button>
+                        <label for="sub"></label>
+                    </li>
+                    <li><button type="button" form="form" name="activate" id="act" onclick="testFunction()">Activate</button>
+                        <label for="act"></label>
+
+                        <!-- <script>
+                            document.getElementById("act").addEventListener("click", testFunction, true)
+                        </script> -->
+                    </li>
+                </ul>
+
+
+                
+            </form>
+        </div>
+    </div>
+    <script>
+        function testFunction() {
+        fetch('/api')
+        .then((response) => response.text())
+        .then((response) => {
+             console.log(response);
+        })
+   }
+    </script>
+
+    
+</body>
+
+</html>
