@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Andrew Thalheimer's lab 4</title>
+    <title>Andrew Thalheimer's Lab 4</title>
     <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="wrapper">
         <div class="container">
-            <h1>Andrew Thalheimer Lab 5</h1>
+            <h1>Andrew Thalheimer Lab 4</h1>
             <form action="/api" method="post" id="form">
                 <ul class="flex-outer">
                     <li><label for="fname">First Name</label>
@@ -69,7 +69,29 @@
         .then((response) => response.text())
         .then((response) => {
              console.log(response);
+
         })
+        document.body.style.backgroundColor = 'red';
+        document.title = "Lab 5 for Andrew Thalheimer";
+        document.querySelector("h1").innerHTML = "Lab 5 for Andrew Thalheimer";
+        document.querySelector(".checkbox-list-label").innerHTML = "Fruits";
+        var x = 0;
+        document.querySelectorAll(".flex-inner li label").forEach(label => {
+           if(x == 0)
+           {
+               label.innerHTML = "apples";
+           }
+           if(x==1)
+           {
+               label.innerHTML = "oranges";
+           }
+           if(x==2)
+           {
+               label.innerHTML = "bananas";
+           }
+           x++;
+        });
+        document.querySelector(".flex-outer").style.margin = "0 auto";
    }
     </script>
 
