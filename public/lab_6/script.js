@@ -3,7 +3,7 @@
 function range(int) {
   const arr = [];
   for (let i = 0; i < int; i += 1) {
-    arr.push(i);
+    arr.push(math.random() * 100 + 1);
   }
   return arr;
 }
@@ -17,6 +17,15 @@ function sortFunction(a, b, key) {
   return 0;
 }
 
+function myFunction() {
+  const countries = [];
+  countries = range(10);
+  sortFunction(countries);
+  return countries;
+}
+
+
+
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray(); // here we're using jQuery to serialize the form
@@ -29,7 +38,9 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
-      // You're going to do your lab work in here. Replace this comment.
+      var countryList = document.createElement("ol");
+      countryList.className = 'flex-inner';
+      document.getElementById('ee').prepend(countryList);
       console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
